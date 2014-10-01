@@ -205,6 +205,7 @@
     <Content Include="fonts\font-awesome\scss\_stacked.scss" />
     <Content Include="fonts\font-awesome\scss\_variables.scss" />
     <Content Include="fonts\font-awesome\scss\font-awesome.scss" />
+    <None Include="Properties\PublishProfiles\modalcropload.pubxml" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\handlebars.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
