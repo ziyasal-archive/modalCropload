@@ -1,4 +1,4 @@
 modalCropload
 =============
 
-Upload image and crop in modal (jquery, jcrop, fileUpload, bootstrap)
+Upload image and crop in modal (jquery, jcrop, jquery.fileupload, bootstrap)

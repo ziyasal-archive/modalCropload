@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30501.0
+VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web.UI", "Web.UI\Web.UI.csproj", "{713C20D2-F6FD-442A-BF87-EE784972E959}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModalCropload", "ModalCropload\ModalCropload.csproj", "{713C20D2-F6FD-442A-BF87-EE784972E959}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{BB4CDB6B-4A47-4F5B-B478-F14CB8350A1A}"
 	ProjectSection(SolutionItems) = preProject
