@@ -1,4 +1,6 @@
-﻿namespace ModalCropload
+﻿using System.Web.Optimization;
+
+namespace ModalCropload
 {
     public class BundleConfig
     {

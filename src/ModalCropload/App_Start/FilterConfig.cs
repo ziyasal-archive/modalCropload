@@ -1,4 +1,6 @@
-﻿namespace ModalCropload
+﻿using System.Web.Mvc;
+
+namespace ModalCropload
 {
     public class FilterConfig
     {

@@ -1,4 +1,7 @@
-﻿using ModalCropload.Controllers;
+﻿using System.Web.Mvc;
+using Autofac;
+using Autofac.Integration.Mvc;
+using ModalCropload.Controllers;
 
 namespace ModalCropload
 {

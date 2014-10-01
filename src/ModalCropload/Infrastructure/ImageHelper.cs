@@ -4,6 +4,7 @@ using System.Drawing.Drawing2D;
 using System.IO;
 using System.Linq;
 using System.Web;
+using ImageResizer.Configuration;
 
 namespace ModalCropload.Infrastructure
 {
