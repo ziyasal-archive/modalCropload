@@ -1,0 +1,16 @@
+﻿<script type="text/x-handlebars-template" id="tmpl-uploaded-img-list-item">
+    <div class="col-md-2 preview-list-item">
+        <div class="row">
+            <div class="col-md-12">
+                <img alt='' class='uploaded-img-list-item img-thumbnail' src='{{imgSrc}}?format=png&width=120&height=90&scache=disk' />
+            </div>
+            <div class="col-md-3 col-md-push-3">
+                <button data-id="{{id}}" data-img-key='{{imgSrc}}' type="button" class="btn btn-danger btn-xs preview-list-item-remove"
+                        style="position: relative; top: -15;">
+                    Sil
+                </button>
+            </div>
+        </div>
+    </div>
+
+</script>

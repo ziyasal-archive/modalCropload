@@ -1,0 +1,76 @@
+﻿@model Web.UI.Models.NewscastCreateModel
+@{
+    ViewBag.Title = "Yeni Haber";
+}
+@section header{
+    <link href="../../Content/jquery.Jcrop.min.css" rel="stylesheet" />
+}
+<h2>Yeni Haber</h2>
+<form enctype="multipart/form-data" role="form" method="post" action="@Url.Action("Create")">
+    <!-- HIDDENs -->
+    <div class="form-group">
+        @Html.HiddenFor(m => m.ImageUploadDetail, new { @class = "page-uploaded-img-detail" })
+    </div>
+    <!--Upload Photo-->
+    <div class="form-group">
+        <label></label>
+        <div>
+            <input type="button" value="Fotoğraf Yükle" class="img-upload-modal-opener" />
+        </div>
+    </div>
+    <!--Photo List-->
+    <div class="row uploaded-img-list">
+    </div>
+    <!-- TITLE -->
+    <div class="form-group">
+        @Html.LabelFor(m => m.Newscast.Title, "Başlık", new { @class = "control-label" })
+        <div>
+            @Html.TextBoxFor(m => m.Newscast.Title, new { @class = "form-control", placeholder = "Başlık" })
+            @Html.ValidationMessageFor(m => m.Newscast.Title, null, new { @class = "help-block" })
+        </div>
+    </div>
+    <!-- SUMMARY -->
+    <div class="form-group">
+        @Html.LabelFor(m => m.Newscast.Summary, "İçerik Özeti", new { @class = "control-label" })
+        <div>
+            @Html.TextAreaFor(m => m.Newscast.Summary, new { @class = "form-control", placeholder = "Anasayfada görüntülecek özet içerik.", rows = 4 })
+            @Html.ValidationMessageFor(m => m.Newscast.Summary, null, new { @class = "help-block" })
+        </div>
+    </div>
+    <!-- CONTEXT -->
+    <div class="form-group">
+        @Html.LabelFor(m => m.Newscast.Context, "İçerik", new { @class = "control-label" })
+        <div>
+            @Html.TextAreaFor(m => m.Newscast.Context, new { @class = "form-control", placeholder = "İçerik", rows = 10 })
+            @Html.ValidationMessageFor(m => m.Newscast.Context, null, new { @class = "help-block" })
+        </div>
+    </div>
+    <!-- ACTIVE -->
+    <div class="form-group">
+        <div>
+            <div class="checkbox-inline">
+                <label>@Html.CheckBoxFor(m => m.Newscast.IsActive) Aktif</label>
+            </div>
+        </div>
+    </div>
+    <!-- SUBMIT -->
+    <div class="form-group">
+        <div>
+            <button type="submit" class="btn btn-primary">Kaydet</button>
+        </div>
+    </div>
+</form>
+@Html.Partial("_Partial/_UploadModal")
+@Html.Partial("_Partial/_ImageListItemTmpl")
+@section scripts
+    {
+    <script src="../../Scripts/handlebars.js"></script>
+    <script src="../../Scripts/app/commonValidation.js"></script>
+    <script src="../../Scripts/jquery.Jcrop.js"></script>
+    <script src="../../Scripts/jquery.ui.widget.js"></script>
+    <script src="../../Scripts/jquery.iframe-transport.js"></script>
+    <script src="../../Scripts/jquery.fileupload.js"></script>
+    <script src="../../Scripts/bootbox.js"></script>
+    <script src="../../Scripts/app/modalCropload.js"></script>
+    <script src="../../Scripts/app/newscastCreate.js"></script>
+}

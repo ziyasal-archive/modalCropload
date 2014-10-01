@@ -1,0 +1,40 @@
+﻿<!-- Modal -->
+<div class="modal fade modal-img-upload" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <input type="hidden" class="modal-uploaded-img-detail" />
+        <input type="hidden" class="modal-uploaded-img-key" />
+
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">Resim Ekle</h4>
+            </div>
+            <div class="modal-body">
+                <!-- Photo -->
+                <div class="form-group">
+                    <img class="img-responsive img-preview-field" style="width: 750px;" src="" alt="" />
+                </div>
+                <!--Resii Ekle Button-->
+                <div class="form-group">
+                    <label class=" control-label">
+                    </label>
+                    <div>
+                        <div class="input-group">
+                            <span class="input-group-btn">
+                                <span class="btn btn-default btn-file">
+                                    Fotoğraf Seç
+                                    <input class="form-control" type="file" id="imagePicker" name="imagePicker" accept="image" />
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="alert alert-danger upload-warnings" style="max-width: 400px; display: none"></div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default modal-cancel-button">İptal</button>
+                <button type="button" class="btn btn-primary modal-add-button">Ekle</button>
+            </div>
+        </div>
+    </div>
+</div>
