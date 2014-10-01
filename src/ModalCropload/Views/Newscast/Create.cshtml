@@ -1,11 +1,11 @@
 ﻿@model ModalCropload.Models.NewscastCreateModel
 @{
-    ViewBag.Title = "Yeni Haber";
+    ViewBag.Title = "Newscast";
 }
 @section header{
     <link href="../../Content/jquery.Jcrop.min.css" rel="stylesheet" />
 }
-<h2>Yeni Haber</h2>
+
 <form enctype="multipart/form-data" role="form" method="post" action="@Url.Action("Create")">
     <!-- HIDDENs -->
     <div class="form-group">
@@ -15,7 +15,7 @@
     <div class="form-group">
         <label></label>
         <div>
-            <input type="button" value="Fotoğraf Yükle" class="img-upload-modal-opener" />
+            <input type="button" value="Upload Image" class="img-upload-modal-opener" />
         </div>
     </div>
     <!--Photo List-->
@@ -23,25 +23,25 @@
     </div>
     <!-- TITLE -->
     <div class="form-group">
-        @Html.LabelFor(m => m.Newscast.Title, "Başlık", new { @class = "control-label" })
+        @Html.LabelFor(m => m.Newscast.Title, "Title", new { @class = "control-label" })
         <div>
-            @Html.TextBoxFor(m => m.Newscast.Title, new { @class = "form-control", placeholder = "Başlık" })
+            @Html.TextBoxFor(m => m.Newscast.Title, new { @class = "form-control", placeholder = "Title" })
             @Html.ValidationMessageFor(m => m.Newscast.Title, null, new { @class = "help-block" })
         </div>
     </div>
     <!-- SUMMARY -->
     <div class="form-group">
-        @Html.LabelFor(m => m.Newscast.Summary, "İçerik Özeti", new { @class = "control-label" })
+        @Html.LabelFor(m => m.Newscast.Summary, "Summary", new { @class = "control-label" })
         <div>
-            @Html.TextAreaFor(m => m.Newscast.Summary, new { @class = "form-control", placeholder = "Anasayfada görüntülecek özet içerik.", rows = 4 })
+            @Html.TextAreaFor(m => m.Newscast.Summary, new { @class = "form-control", placeholder = "Summary", rows = 4 })
             @Html.ValidationMessageFor(m => m.Newscast.Summary, null, new { @class = "help-block" })
         </div>
     </div>
     <!-- CONTEXT -->
     <div class="form-group">
-        @Html.LabelFor(m => m.Newscast.Context, "İçerik", new { @class = "control-label" })
+        @Html.LabelFor(m => m.Newscast.Context, "Content", new { @class = "control-label" })
         <div>
-            @Html.TextAreaFor(m => m.Newscast.Context, new { @class = "form-control", placeholder = "İçerik", rows = 10 })
+            @Html.TextAreaFor(m => m.Newscast.Context, new { @class = "form-control", placeholder = "Content", rows = 10 })
             @Html.ValidationMessageFor(m => m.Newscast.Context, null, new { @class = "help-block" })
         </div>
     </div>
@@ -49,14 +49,14 @@
     <div class="form-group">
         <div>
             <div class="checkbox-inline">
-                <label>@Html.CheckBoxFor(m => m.Newscast.IsActive) Aktif</label>
+                <label>@Html.CheckBoxFor(m => m.Newscast.IsActive) IsActive</label>
             </div>
         </div>
     </div>
     <!-- SUBMIT -->
     <div class="form-group">
         <div>
-            <button type="submit" class="btn btn-primary">Kaydet</button>
+            <button type="submit" class="btn btn-primary">Save</button>
         </div>
     </div>
 </form>

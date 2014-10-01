@@ -9,8 +9,6 @@ namespace ModalCropload.Controllers
 {
     public class NewscastController : Controller
     {
-
-        //-→ Create New
         [HttpGet]
         public ViewResult Create()
         {
@@ -29,8 +27,6 @@ namespace ModalCropload.Controllers
             if (!string.IsNullOrWhiteSpace(model.ImageUploadDetail))
             {
                 IEnumerable<TempImageData> uploadedImages = ProcessUploadedImageDetails(model.ImageUploadDetail);
-
-                //TODO: Burası örnek olduğu için boş.
             }
 
 
@@ -50,7 +46,7 @@ namespace ModalCropload.Controllers
                 var orgImgSettings = new ImageCroppingSettings(tempImagePath)
                 {
                     UniqueKey = uniqueKey,
-                    ImageNamePrefix = "Org-Tekmirsa-Haberler",
+                    ImageNamePrefix = "Com-X-News",
                     OutputExtension = ".jpg",
                     OutputFolderPath = folderPath,
                     ScaleWidth = 750,

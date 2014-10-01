@@ -48,7 +48,7 @@
         $(defaults.clsNames.UploadedImgList).on('click', defaults.clsNames.PreviewListItemRemove, function () {
             var self = $(this);
             bootbox.setDefaults({ locale: 'tr' });
-            bootbox.confirm("Resmi silmek istiyormusunuz?", function (result) {
+            bootbox.confirm("Delete image?", function (result) {
                 if (result) {
                     var itemToDeleteKey = self.data('img-key');
                     self.closest('.preview-list-item').fadeOut(function () {
