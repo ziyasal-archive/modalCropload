@@ -43,7 +43,6 @@
         return tmpVal === "" ? [] : JSON.parse(tmpVal);
     };
 
-    // Create Sayfasındaki Image 'ların Sil Button
     var initDeleteImageListItem = function () {
         $(defaults.clsNames.UploadedImgList).on('click', defaults.clsNames.PreviewListItemRemove, function () {
             var self = $(this);
